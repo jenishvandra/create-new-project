@@ -14,10 +14,11 @@ app.use(express.json())
 // Mount API router at /api
 app.use('/api', apiRouter)
 
-// Standalone runner
-if (process.env.NODE_ENV !== 'test' && import.meta.url === `file://${process.argv[1]}`) {
+// Start server
+if (process.env.NODE_ENV !== 'test') {
   const PORT = process.env.PORT || 5000
-  app.listen(PORT, () => {
-    console.log(`[Life RPG API Server] Running on http://localhost:${PORT}`)
+
+  app.listen(PORT, '0.0.0.0', () => {
+    console.log(`[Life RPG API Server] Running on port ${PORT}`)
   })
 }
