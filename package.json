@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite --host 0.0.0.0",
-    "server": "node --input-type=module --eval \"import('./server/index.ts')\"",
+   "server": "node server/index.ts",
     "build": "vite build",
     "preview": "vite preview",
     "format": "oxfmt"
