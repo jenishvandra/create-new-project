@@ -1,0 +1,1 @@
+{"rewrites":[{"source":"/api/:path*","destination":"https://life-rpg-backend-4rcl.onrender.com/api/:path*"}]} 
