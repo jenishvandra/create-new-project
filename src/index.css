@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&family=Fira+Code:wght@400;500;600&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --font-display: 'Outfit', sans-serif;
+  --font-sans: 'Plus Jakarta Sans', sans-serif;
+  --font-mono: 'Fira Code', monospace;
+
+  /* Color Palette */
+  --color-olive-dark: #282A21;
+  --color-olive-card: #2F3127;
+  --color-olive-hover: #36382D;
+  --color-olive-border: #3F4236;
+  --color-[#D46B4E]: #D46B4E;
+  --color-warm-white: #E6E5D8;
+  --color-sage-muted: #A2A190;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: #A2A190;
+  background-color: #1A1C16;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Outfit', sans-serif;
+  color: #E6E5D8;
+}
+
+/* Semi-Transparent Glassmorphism Styling */
+.glass-landing-header {
+  background: rgba(30, 32, 24, 0.55);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.olive-panel {
+  background: rgba(47, 49, 39, 0.55);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+}
+
+.olive-card {
+  background: rgba(47, 49, 39, 0.45);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.olive-card:hover {
+  background: rgba(54, 56, 45, 0.65);
+  border-color: rgba(212, 107, 78, 0.6);
+  transform: translateY(-3px);
+  box-shadow: 0 16px 32px -8px rgba(0, 0, 0, 0.5);
+}
+
+.olive-input {
+  background: rgba(42, 43, 35, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #E6E5D8;
+  backdrop-filter: blur(10px);
+  transition: all 0.2s ease;
+}
+
+.olive-input:focus {
+  outline: none;
+  border-color: #D46B4E;
+  box-shadow: 0 0 12px rgba(212, 107, 78, 0.4);
+  background: rgba(46, 48, 39, 0.75);
+}
+
+/* Primary Terracotta CTA Button with Glow */
+.btn-terracotta {
+  background-color: #D46B4E;
+  color: #FFFFFF;
+  font-weight: 700;
+  box-shadow: 0 4px 20px rgba(212, 107, 78, 0.45);
+  transition: all 0.25s ease;
+}
+
+.btn-terracotta:hover {
+  background-color: #E2795B;
+  box-shadow: 0 6px 28px rgba(212, 107, 78, 0.65);
+  transform: translateY(-2px);
+}
+
+.btn-terracotta:active {
+  transform: translateY(0px);
+}
+
+/* Secondary Outline Button with Glass Blur */
+.btn-outline-sage {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: #E6E5D8;
+  font-weight: 600;
+  transition: all 0.25s ease;
+}
+
+.btn-outline-sage:hover {
+  border-color: #D46B4E;
+  background: rgba(212, 107, 78, 0.15);
+  color: #FFFFFF;
+  transform: translateY(-1px);
+}
+
+/* Active Sidebar Item */
+.sidebar-item-active {
+  background: rgba(58, 60, 48, 0.85);
+  backdrop-filter: blur(10px);
+  border-left: 4px solid #D46B4E;
+  color: #D46B4E;
+  font-weight: 700;
+}
+
+/* Live Background Animations */
+@keyframes kenburnsZoom {
+  0% { transform: scale(1) translate(0, 0); }
+  50% { transform: scale(1.08) translate(-1%, -1%); }
+  100% { transform: scale(1) translate(0, 0); }
+}
+
+.animate-kenburns {
+  animation: kenburnsZoom 25s infinite ease-in-out alternate;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #1A1C16;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(214, 214, 214, 0.2);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #D46B4E;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}

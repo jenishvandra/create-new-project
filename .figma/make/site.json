@@ -1,0 +1,10 @@
+{
+  "description": "Streamlines project management by organizing tasks, tracking progress, and enhancing team collaboration for increased productivity and efficiency.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
